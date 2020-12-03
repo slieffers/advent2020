@@ -14,10 +14,13 @@ module Code =
     let combineTuples (dict: Map<int, int>) tup =
         (fst tup, snd tup, dict.[(fst tup) + (snd tup)])
 
-    let part1 nums = 
+    let findPairForNums total nums =
         nums 
         |> Seq.toList 
-        |> findNums 2020 Map.empty
+        |> findNums total Map.empty
+
+    let part1 nums = 
+        findPairForNums 2020 nums
         |> Option.get
 
     let part2 nums = 
@@ -30,6 +33,6 @@ module Code =
         dict
         |> Map.toList
         |> List.map fst
-        |> List.tryPick(fun k -> findNums k Map.empty (nums |> Seq.toList))
+        |> List.tryPick(fun k -> findPairForNums k nums)
         |> Option.get
         |> combineTuples dict
