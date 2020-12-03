@@ -8,16 +8,21 @@
 
     <ItemGroup>
       <None Remove="Day1.txt" />
+      <None Remove="Day2.txt" />
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="Day1.txt">
+      <Content Include="InputFiles\Day1.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="InputFiles\Day2.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Day1\Day1.fsproj" />
+      <ProjectReference Include="..\Day2\Day2.fsproj" />
     </ItemGroup>
 
 </Project>

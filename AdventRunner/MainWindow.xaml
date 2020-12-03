@@ -9,6 +9,11 @@
     <Grid>
         <TextBox x:Name="MainTextBox" HorizontalAlignment="Center" Height="167" Margin="0,217,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="598"/>
         <Button Content="Run Advent" HorizontalAlignment="Left" Margin="101,99,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <ComboBox x:Name="DaySelect" HorizontalAlignment="Left" Margin="206,98,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem IsSelected="True">Select Advent Day</ComboBoxItem>
+            <ComboBoxItem>Day 1</ComboBoxItem>
+            <ComboBoxItem>Day 2</ComboBoxItem>
+        </ComboBox>
 
     </Grid>
 </Window>

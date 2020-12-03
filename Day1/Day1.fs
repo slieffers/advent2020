@@ -1,6 +1,6 @@
-﻿namespace Day1
+﻿namespace FSharp.Code
 
-module Code =
+module Day1 =
     let rec findNums (total: int) (dict: Map<int, int>) (nums: list<int>) =
         if dict.ContainsKey(nums.Head) 
         then 
