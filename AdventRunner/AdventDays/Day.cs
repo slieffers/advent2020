@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace AdventRunner.InputFiles
+namespace AdventRunner.AdventDays
 {
     public abstract class Day
     {

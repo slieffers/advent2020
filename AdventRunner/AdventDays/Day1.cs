@@ -4,7 +4,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using AdventRunner.Helpers;
-using AdventRunner.InputFiles;
 
 namespace AdventRunner.AdventDays
 {
