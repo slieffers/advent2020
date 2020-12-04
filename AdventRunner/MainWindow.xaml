@@ -13,6 +13,7 @@
             <ComboBoxItem IsSelected="True">Select Advent Day</ComboBoxItem>
             <ComboBoxItem>Day 1</ComboBoxItem>
             <ComboBoxItem>Day 2</ComboBoxItem>
+            <ComboBoxItem>Day 3</ComboBoxItem>
         </ComboBox>
 
     </Grid>

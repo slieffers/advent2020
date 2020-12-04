@@ -14,14 +14,24 @@ module Day2 =
     let isInRange range count =
         seq {fst range .. snd range} |> Seq.contains count
 
-    let isValidPassword range ch password =
+    let isValidPasswordByRange range ch password =
         password 
         |> Seq.filter(fun c -> c = ch)
         |> Seq.length
-        |> isInRange range 
+        |> isInRange range
+        
+    let isValidPasswordByPosition positions ch (password: string) =
+        (password.[fst positions - 1] = ch && password.[snd positions - 1] <> ch)
+        || (password.[fst positions - 1] <> ch && password.[snd positions - 1] = ch)
 
     let part1 (passwords:seq<string>) =
         passwords 
         |> Seq.map(parseEntry)
-        |> Seq.filter(fun (range, ch, password) -> isValidPassword range ch password)
+        |> Seq.filter(fun (range, ch, password) -> isValidPasswordByRange range ch password)
+        |> Seq.length
+        
+    let part2 (passwords:seq<string>) =
+        passwords 
+        |> Seq.map(parseEntry)
+        |> Seq.filter(fun (range, ch, password) -> isValidPasswordByPosition range ch password)
         |> Seq.length

@@ -1,22 +1,18 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using AdventRunner.Helpers;
+using AdventRunner.InputFiles;
 
 namespace AdventRunner.AdventDays
 {
-    public class Day1
+    public class Day1 : Day
     {
         public static void Run()
         {
-            using TextReader tr = new StreamReader(@"InputFiles\Day1.txt");
-            IEnumerable<int> numbers = 
-                tr
-                    .ReadToEnd()
-                    .Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
+            List<int> numbers = GetFileContents(nameof(Day1))
                     .Select(int.Parse)
                     .ToList();
 

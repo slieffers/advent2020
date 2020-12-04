@@ -18,11 +18,15 @@
       <Content Include="InputFiles\Day2.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <Content Include="InputFiles\Day3.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Day1\Day1.fsproj" />
       <ProjectReference Include="..\Day2\Day2.fsproj" />
+      <ProjectReference Include="..\Day3\Day3.vbproj" />
     </ItemGroup>
 
 </Project>
