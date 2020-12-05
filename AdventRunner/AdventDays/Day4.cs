@@ -31,11 +31,14 @@ namespace AdventRunner.AdventDays
                     stringBuilder.Clear();
                 }
             }
-            
-            int numberOfValidPassports = FSharp.Code.Day4.part1(passports.AsEnumerable());
-            
+
+            passports.Add(stringBuilder.ToString().Trim());
+
+            int numberOfValidPassportsPart1 = FSharp.Code.Day4.part1(passports.AsEnumerable());
+            int numberOfValidPassportsPart2 = FSharp.Code.Day4.part2(passports.AsEnumerable());
+
             var textBox = Application.Current.MainWindow.FindChild<TextBox>("MainTextBox");
-            textBox.Text = $"Part 1: {numberOfValidPassports}\r\nPart 2: {0}";
+            textBox.Text = $"Part 1: {numberOfValidPassportsPart1}\r\nPart 2: {numberOfValidPassportsPart2}";
         }
     }
 }
